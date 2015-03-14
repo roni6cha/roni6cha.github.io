@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ballroom Company</title>
+		<link rel="stylesheet" href="includes/style.css">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<form action="db.php" method="get">
+			<div id="wrapper">
+				<main>
+					<article>
+						<h1>Insert</h1>
+						<br>
+						<section>
+							
+							<article>
+								<br>
+								<h5>Delete emplyee per ID</h5>
+								<input type="text" name="id" placeholder="ID" autocomplete="on"/>
+								<input type="submit" name="insert" value="Delete" autocomplete="on"/>
+								<br>
+								<br>
+								<br>
+								</article>
+								<hr>
+								
+							<article>
+								<br>
+								<h5>show events per year</h5>
+								<input type="text" name="year" placeholder="Year" autocomplete="on"/>
+								<input type="submit" name="insert" value="EventsPerYear" autocomplete="on"/>
+								<br>
+							</article>
+							<article>
+
+								<br>
+								<h5>insert a new COSTUMER</h5>
+								<input type="text" name="name1" placeholder="Name" autocomplete="on"/>
+								<br>
+								<input type="text" name="adress1" placeholder="Adress" autocomplete="on"/>
+								<br>
+								<input type="text" name="phone1" placeholder="Phone" autocomplete="on"/>
+								<br>
+								<input type="text" name="billNum1" placeholder="billNum" autocomplete="on"/>
+								<br>
+								Add new:
+								<input type="submit" name="insert" value="costumer" autocomplete="on"/>
+								<br>
+							</article>
+							<hr>
+							<article>
+								<br>
+								<h5>insert a new EMPLOYEE</h5>
+								<input type="text" name="name2" placeholder="Name" autocomplete="on"/>
+								<br>
+								<input type="text" name="family2" placeholder="family" autocomplete="on" />
+								<br>
+								<input type="text" name="sex2" placeholder="sex" autocomplete="on" />
+								<br>
+								<input type="text" name="birth2" placeholder="birth" autocomplete="on" />
+								<br>
+								<input type="text" name="startDate2" placeholder="Start Date" autocomplete="on" />
+								<br>
+								<input type="text" name="role2" placeholder="Role" autocomplete="on" />
+								<br>
+								<input type="text" name="adress2" placeholder="Adress" autocomplete="on" />
+								<br>
+								<input type="text" name="phone2" placeholder="Phone" autocomplete="on" />
+								<br>
+								Add new:
+								<input type="submit" name="insert" value="employee"/>
+								<br>
+							</article>
+							<hr>
+							<article>
+								<br>
+								<h5>insert a new EVENT</h5>
+								<input type="text" name="name3" placeholder="Name" autocomplete="on"/>
+								<br>
+								Add new:
+								<input type="submit" name="insert" value="event"/>
+								<br>
+							</article>
+							<hr>
+							<article>
+								<br>
+								<h5>insert a new HALL</h5>
+								<input type="text" name="name4" placeholder="Name" autocomplete="on"/>
+								<br>
+								<input type="text" name="capacity4" placeholder="Capacity" autocomplete="on"/>
+								<br>
+								Add new:
+								<input type="submit" name="insert" value="halls"/>
+								<br>
+							</article>
+							<hr>
+							<article>
+								<br>
+								<h5>insert a new MENU</h5>
+								<input type="text" name="name5" placeholder="Name" autocomplete="on"/>
+								<br>
+								<input type="text" name="price5"  placeholder="Price" autocomplete="on"/>
+								<br>
+								Add new:
+								<input type="submit" name="insert" value="menus"/>
+								<br>
+							</article>
+							<hr>
+							<article>
+								<br>
+								<h5>insert a new ORDER</h5>
+								<input type="text" name="date6" placeholder="date" autocomplete="on"/>
+								<br>
+								<input type="text" name="amount6" placeholder="amount" autocomplete="on"/>
+								<br>
+								<input type="text" name="costumer6" placeholder="costumer" autocomplete="on"/>
+								<br>
+								<input type="text" name="bill6" placeholder="bill" autocomplete="on"/>
+								<br>
+								<input type="text" name="employee6" placeholder="employee" autocomplete="on"/>
+								<br>
+								<input type="text" name="event6" placeholder="event" autocomplete="on"/>
+								<br>
+								<input type="text" name="menu6" placeholder="menu" autocomplete="on"/>
+								<br>
+								<input type="text" name="hall6" placeholder="hall" autocomplete="on"/>
+								<br>
+								Add new:
+								<input type="submit" name="insert" value="orders"/>
+								<br>
+							</article>
+							<hr>
+							<article>
+								<br>
+								<h5>insert a new ROLE</h5>
+								<input type="text" name="description7" placeholder="description" autocomplete="on"/>
+								<br>
+								Add new:
+								<input type="submit" name="insert" value="roles"/>
+								<br>
+							</article>
+							<hr>
+							<article>
+								<br>
+								<h5>insert a new SERVING</h5>
+								<input type="text" name="name8" placeholder="Name" autocomplete="on"/>
+								<br>
+								<input type="text" name="description8" placeholder="description" autocomplete="on"/>
+								<br>
+								Add new:
+								<input type="submit" name="insert" value="servings"/>
+								<br>
+							</article>
+							<hr>
+							
+						</section>
+
+		</form>
+
+		</main>
+
+		<nav>
+			<div class="btn-group" role="group" aria-label="...">
+				<ul>
+					<li>
+						<a href="index.html">
+						<button type="button" class="btn btn-default" id="buttonLinks">
+							Back to Main
+						</button></a>
+					</li>
+
+					<li>
+						<a href="information.html">
+						<button type="button" class="btn btn-default" id="buttonLinks">
+							Information
+						</button></a>
+					</li>
+
+					<li>
+						<a href="insert.html">
+						<button type="button" class="btn btn-default" id="buttonLinks">
+							Insert
+						</button></a>
+					</li>
+
+					<li>
+						<a href="actions.html">
+						<button type="button" class="btn btn-default" id="buttonLinks">
+							Actions
+						</button></a>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+		</div>
+	</body>
+</html>

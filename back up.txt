@@ -1,0 +1,286 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- מארח: localhost
+-- זמן ייצור: מרץ 04, 2015 at 04:07 PM
+-- גרסת שרת: 5.1.36
+-- גרסת PHP: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- מאגר נתונים: `ballroom company`
+--
+
+-- --------------------------------------------------------
+
+--
+-- מבנה טבלה עבור טבלה `bills`
+--
+
+CREATE TABLE IF NOT EXISTS `bills` (
+  `code` int(11) NOT NULL AUTO_INCREMENT,
+  `issueDate` date NOT NULL,
+  `money` int(11) NOT NULL,
+  PRIMARY KEY (`code`)
+) ENGINE=InnoDB  DEFAULT CHARSET=ascii AUTO_INCREMENT=13 ;
+
+--
+-- הוצאת מידע עבור טבלה `bills`
+--
+
+INSERT INTO `bills` (`code`, `issueDate`, `money`) VALUES
+(1, '2010-05-07', 9999),
+(2, '2010-05-07', 100),
+(3, '2014-05-11', 500),
+(4, '2014-05-11', 100000),
+(5, '2014-05-11', 100000),
+(12, '2014-05-01', 4000);
+
+-- --------------------------------------------------------
+
+--
+-- מבנה טבלה עבור טבלה `costumers`
+--
+
+CREATE TABLE IF NOT EXISTS `costumers` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(10) NOT NULL,
+  `adress` varchar(10) NOT NULL,
+  `phone` int(11) NOT NULL,
+  `billNum` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=ascii AUTO_INCREMENT=11 ;
+
+--
+-- הוצאת מידע עבור טבלה `costumers`
+--
+
+INSERT INTO `costumers` (`id`, `name`, `adress`, `phone`, `billNum`) VALUES
+(1, 'arik', 'herzel', 52, 123),
+(2, 'ben', 'lavnun', 54, 456),
+(3, 'roz', 'asd', 56, 555),
+(4, 'david', 'bilu', 888, 2222),
+(6, 'moses', 'instain', 555, 1111),
+(7, 'donatelo', 'usa', 56854975, 0),
+(8, 'donatelo', 'usa', 8888, 0),
+(9, 'kkk', 'canada', 888, 555555),
+(10, 'rooooo', 'usa', 6666, 4);
+
+-- --------------------------------------------------------
+
+--
+-- מבנה טבלה עבור טבלה `employees`
+--
+
+CREATE TABLE IF NOT EXISTS `employees` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(10) NOT NULL,
+  `family` varchar(10) NOT NULL,
+  `sex` varchar(10) NOT NULL,
+  `birth` date NOT NULL,
+  `startDate` date NOT NULL,
+  `role` varchar(10) NOT NULL,
+  `adress` varchar(10) NOT NULL,
+  `phone` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=ascii AUTO_INCREMENT=8 ;
+
+--
+-- הוצאת מידע עבור טבלה `employees`
+--
+
+INSERT INTO `employees` (`id`, `name`, `family`, `sex`, `birth`, `startDate`, `role`, `adress`, `phone`) VALUES
+(3, 'rob', 'jhon', 'man', '0000-00-00', '0000-00-00', '1', 'f', 44),
+(6, 'danielo', 'izec', 'man', '0000-00-00', '0000-00-00', 'waiter', 'rishon', 56);
+
+-- --------------------------------------------------------
+
+--
+-- מבנה טבלה עבור טבלה `employeesbyorder`
+--
+
+CREATE TABLE IF NOT EXISTS `employeesbyorder` (
+  `idEmployee` int(20) NOT NULL,
+  `orderNum` int(20) NOT NULL,
+  KEY `idEmployee` (`idEmployee`),
+  KEY `orderNum` (`orderNum`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- הוצאת מידע עבור טבלה `employeesbyorder`
+--
+
+INSERT INTO `employeesbyorder` (`idEmployee`, `orderNum`) VALUES
+(4, 1234),
+(4, 654),
+(654, 3),
+(6354, 3);
+
+-- --------------------------------------------------------
+
+--
+-- מבנה טבלה עבור טבלה `events`
+--
+
+CREATE TABLE IF NOT EXISTS `events` (
+  `code` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(10) NOT NULL,
+  PRIMARY KEY (`code`)
+) ENGINE=InnoDB  DEFAULT CHARSET=ascii AUTO_INCREMENT=19 ;
+
+--
+-- הוצאת מידע עבור טבלה `events`
+--
+
+INSERT INTO `events` (`code`, `name`) VALUES
+(1, 'wedding'),
+(2, 'bar-mitva'),
+(3, 'brit'),
+(4, 'wed'),
+(5, 'bat-mitva'),
+(15, 'ppp'),
+(16, 'br'),
+(17, 'brita'),
+(18, 'weddin');
+
+-- --------------------------------------------------------
+
+--
+-- מבנה טבלה עבור טבלה `halls`
+--
+
+CREATE TABLE IF NOT EXISTS `halls` (
+  `CodeHall` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(10) NOT NULL,
+  `capacity` int(10) NOT NULL,
+  PRIMARY KEY (`CodeHall`)
+) ENGINE=InnoDB  DEFAULT CHARSET=ascii AUTO_INCREMENT=10 ;
+
+--
+-- הוצאת מידע עבור טבלה `halls`
+--
+
+INSERT INTO `halls` (`CodeHall`, `name`, `capacity`) VALUES
+(1, 'bigg', 1020),
+(2, 'medium', 500),
+(3, 'small', 300),
+(5, 'big', 800),
+(6, 'big', 23),
+(7, 'large', 2000),
+(8, 'the rose', 80),
+(9, 'ddd', 5);
+
+-- --------------------------------------------------------
+
+--
+-- מבנה טבלה עבור טבלה `menus`
+--
+
+CREATE TABLE IF NOT EXISTS `menus` (
+  `num` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(10) NOT NULL,
+  `price` int(10) NOT NULL,
+  PRIMARY KEY (`num`)
+) ENGINE=InnoDB  DEFAULT CHARSET=ascii AUTO_INCREMENT=7 ;
+
+--
+-- הוצאת מידע עבור טבלה `menus`
+--
+
+INSERT INTO `menus` (`num`, `name`, `price`) VALUES
+(1, 'israeli-fo', 300),
+(2, 'thi-food', 200),
+(3, 'fast-food', 100),
+(4, 'b', 60),
+(5, 'mayyan', 9),
+(6, 'bb', 3);
+
+-- --------------------------------------------------------
+
+--
+-- מבנה טבלה עבור טבלה `orders`
+--
+
+CREATE TABLE IF NOT EXISTS `orders` (
+  `num` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `amount` int(11) NOT NULL,
+  `bill` int(10) NOT NULL,
+  `event` int(10) NOT NULL,
+  `menu` int(10) NOT NULL,
+  `CodeHall` int(10) NOT NULL,
+  `employee` int(10) NOT NULL,
+  `costumer` int(10) NOT NULL,
+  PRIMARY KEY (`num`),
+  KEY `event` (`event`),
+  KEY `bill` (`bill`),
+  KEY `menu` (`menu`),
+  KEY `hall` (`CodeHall`)
+) ENGINE=InnoDB  DEFAULT CHARSET=ascii AUTO_INCREMENT=5694 ;
+
+--
+-- הוצאת מידע עבור טבלה `orders`
+--
+
+INSERT INTO `orders` (`num`, `date`, `amount`, `bill`, `event`, `menu`, `CodeHall`, `employee`, `costumer`) VALUES
+(234, '2015-03-10', 5000, 1, 1, 1, 3, 4, 0),
+(432, '2015-03-18', 540, 2, 1, 2, 1, 2, 0),
+(1234, '2015-03-10', 500, 1, 2, 1, 1, 1, 0),
+(3244, '2015-03-16', 400, 2, 1, 2, 5, 2, 0),
+(5679, '2014-05-02', 500, 1, 1, 1, 1, 1, 1),
+(5680, '2014-05-03', 500, 54, 1, 1, 2, 3, 5),
+(5681, '2014-05-02', 20, 2, 1, 1, 1, 1, 1),
+(5690, '2014-05-01', 2, 1, 2, 1, 1, 3, 1),
+(5693, '2014-05-01', 20, 1, 1, 1, 2, 3, 1);
+
+-- --------------------------------------------------------
+
+--
+-- מבנה טבלה עבור טבלה `roles`
+--
+
+CREATE TABLE IF NOT EXISTS `roles` (
+  `code` int(10) NOT NULL AUTO_INCREMENT,
+  `description` varchar(10) NOT NULL,
+  PRIMARY KEY (`code`)
+) ENGINE=InnoDB  DEFAULT CHARSET=ascii AUTO_INCREMENT=7 ;
+
+--
+-- הוצאת מידע עבור טבלה `roles`
+--
+
+INSERT INTO `roles` (`code`, `description`) VALUES
+(1, 'waiter'),
+(2, 'barman'),
+(3, 'gard'),
+(4, 'barman2'),
+(5, 'manager'),
+(6, 'waiterr');
+
+-- --------------------------------------------------------
+
+--
+-- מבנה טבלה עבור טבלה `servings`
+--
+
+CREATE TABLE IF NOT EXISTS `servings` (
+  `code` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(10) NOT NULL,
+  `description` varchar(10) NOT NULL,
+  PRIMARY KEY (`code`)
+) ENGINE=InnoDB  DEFAULT CHARSET=ascii AUTO_INCREMENT=8 ;
+
+--
+-- הוצאת מידע עבור טבלה `servings`
+--
+
+INSERT INTO `servings` (`code`, `name`, `description`) VALUES
+(1, 'chiken', 'rice and c'),
+(2, 'burger', 'burger and'),
+(3, 'chips', 'yami'),
+(4, 'chips', 'wow'),
+(5, 'chips', 'a'),
+(6, 'chips', 'w'),
+(7, 'c', 'w');
